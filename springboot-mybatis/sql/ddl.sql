@@ -1,0 +1,15 @@
+CREATE TABLE t_user(
+    id INT NOT NULL AUTO_INCREMENT,
+    username VARCHAR(50),
+    psw VARCHAR(50),
+    CONSTRAINT PK_USER PRIMARY  KEY(ID)
+);
+
+CREATE TABLE t_city(
+    id INT NOT NULL AUTO_INCREMENT,
+    city_name VARCHAR(50),
+    description VARCHAR(200),
+    CONSTRAINT PK_CITY PRIMARY KEY (id)
+);
+
+
