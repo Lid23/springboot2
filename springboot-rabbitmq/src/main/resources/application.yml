@@ -5,6 +5,6 @@ spring:
     virtual-host: /
     listener:
       simple:
-        acknowledge-mode: manual  # ÊÖ¶¯ACK ²»¿ªÆô×Ô¶¯ACKÄ£Ê½,Ä¿µÄÊÇ·ÀÖ¹±¨´íºóÎ´ÕıÈ·´¦ÀíÏûÏ¢¶ªÊ§ Ä¬ÈÏ Îª none
+        acknowledge-mode: manual  # æ‰‹åŠ¨ACK ä¸å¼€å¯è‡ªåŠ¨ACKæ¨¡å¼,ç›®çš„æ˜¯é˜²æ­¢æŠ¥é”™åæœªæ­£ç¡®å¤„ç†æ¶ˆæ¯ä¸¢å¤± é»˜è®¤ ä¸º none
     username: admin
     password: admin
