@@ -10,9 +10,12 @@ spring:
       filters: stat
       driver-class-name: com.mysql.cj.jdbc.Driver
       #基本属性
-      url: jdbc:mysql://10.168.11.61:3309/msg_db?characterEncoding=utf-8&allowMultiQueries=true&useSSL=false
-      username: dba_msginfo
-      password: UA9655pwd_msg
+      #url: jdbc:mysql://10.168.11.61:330/msg_db?characterEncoding=utf-8&allowMultiQueries=true&useSSL=false
+      #username: dba_msginfo
+      url: jdbc:mysql://localhost:3306/noodles?characterEncoding=utf-8&allowMultiQueries=true&useSSL=false
+      username: root
+      password: Fujitsu913
+      #password: UA9655pwd_msg
       #配置初始化大小/最小/最大
       initial-size: 1
       min-idle: 1

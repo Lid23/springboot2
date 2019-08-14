@@ -4,9 +4,9 @@ CREATE TABLE Student
 (
     sno       VARCHAR(3) PRIMARY KEY,
     sname     VARCHAR(8),
-    Ssex      VARCHAR(2),
+    ssex      VARCHAR(2),
     sbirthday DATETIME,
-    class     VARCHAR(5)
+    sclass     VARCHAR(5)
 );
 
 -- 表（二）Course（课程表）
@@ -38,9 +38,9 @@ CREATE TABLE Teacher
 -- 18、 假设使用如下命令建立了一个Grade表：
 CREATE TABLE Grade
 (
-    low  INT,
-    upp  INT,
-    rank CHAR(1)
+    low  int,
+    upp  int,
+    grade VARCHAR(1)
 );
 
 INSERT INTO Student
@@ -121,8 +121,8 @@ FROM Teacher;
 SELECT *
 FROM Grade;
 
--- 1、 查询Student表中的所有记录的Sname、Ssex和Class列。
-SELECT sname, Ssex, class
+-- 1、 查询Student表中的所有记录的Sname、ssex和sclass列。
+SELECT sname, ssex, sclass
 FROM Student;
 
 -- 2、 查询教师所有的单位即不重复的Depart列。
@@ -146,10 +146,10 @@ WHERE degree IN (85, 86, 88);
 -- 6、 查询Student表中“95031”班或性别为“女”的同学记录。
 SELECT *
 FROM Student
-WHERE class = "95031"
-   OR Ssex = '女';
+WHERE sclass = "95031"
+   OR ssex = '女';
 
--- 7、 以Class降序查询Student表的所有记录。
+-- 7、 以sclass降序查询Student表的所有记录。
 SELECT *
 FROM Student
 ORDER BY sno DESC;
@@ -165,7 +165,7 @@ ORDER BY degree DESC;
 -- 9、 查询“95031”班的学生人数。
 SELECT COUNT(*)
 FROM Student
-WHERE class = "95031";
+WHERE sclass = "95031";
 
 -- 10、 查询Score表中的最高分的学生学号和课程号。（子查询或者排序）
 SELECT sno, cno
@@ -209,7 +209,7 @@ FROM Student
 -- 17、 查询“95033”班学生的平均分。
 SELECT AVG(degree) AS avgdegree
 FROM Score
-WHERE sno IN (SELECT sno FROM Student WHERE class = '95033');
+WHERE sno IN (SELECT sno FROM Student WHERE sclass = '95033');
 
 
 SELECT sno,
@@ -219,10 +219,10 @@ SELECT sno,
             WHEN degree BETWEEN 80 AND 89 THEN 'B'
             WHEN degree BETWEEN 70 AND 79 THEN 'C'
             WHEN degree BETWEEN 60 AND 69 THEN 'D'
-            WHEN degree BETWEEN 0 AND 59 THEN 'E' END) AS 'rank'
+            WHEN degree BETWEEN 0 AND 59 THEN 'E' END) AS 'grade'
 FROM Score;
 
--- 现查询所有同学的Sno、Cno和rank列。
+-- 现查询所有同学的Sno、Cno和grade列。
 SELECT *
 FROM Grade;
 
@@ -270,7 +270,7 @@ WHERE cno IN (SELECT cno FROM Score GROUP BY cno HAVING COUNT(*) > 5);
 -- 25、查询95033班和95031班全体学生的记录。
 SELECT *
 FROM Student
-WHERE class IN ('95033', '95031');
+WHERE sclass IN ('95033', '95031');
 
 -- 26、  查询存在有85分以上成绩的课程Cno.
 SELECT DISTINCT cno
@@ -347,9 +347,9 @@ WHERE tno NOT IN
       (SELECT tno FROM Course WHERE cno IN (SELECT DISTINCT cno FROM Score));
 
 -- 36、查询至少有2名男生的班号。
-SELECT class
+SELECT sclass
 FROM Student
-GROUP BY class, ssex
+GROUP BY sclass, ssex
 HAVING ssex = '男'
    AND COUNT(ssex) > 1;
 
@@ -375,7 +375,7 @@ Limit 1;
 -- 40、以班号和年龄从大到小的顺序查询Student表中的全部记录。
 SELECT *
 FROM Student
-ORDER BY class DESC, Sbirthday;
+ORDER BY sclass DESC, Sbirthday;
 
 -- 41、查询“男”教师及其所上的课程。
 SELECT tname, tsex, cname
@@ -392,8 +392,8 @@ LIMIT 1;
 -- 43、查询和“李军”同性别的所有同学的Sname.
 SELECT sname
 FROM Student
-WHERE Ssex =
-      (SELECT Ssex FROM Student WHERE sname = '李军');
+WHERE ssex =
+      (SELECT ssex FROM Student WHERE sname = '李军');
 
 -- 44、查询和“李军”同性别并同班的同学Sname.
 SELECT sname
@@ -407,6 +407,6 @@ SELECT *
 FROM Score
 WHERE sno IN (SELECT sno
               FROM Student
-              WHERE Ssex = '男'
+              WHERE ssex = '男'
 )
   AND cno = (SELECT cno FROM Course WHERE cname = '计算机导论');
