@@ -18,8 +18,6 @@ import java.util.Date;
 @Table(name = "Student")
 public class StudentBean implements Serializable {
 	private static final long serialVersionUID = -346643669532878744L;
-
-
 	@Id
 	@Column
 	private String sno;

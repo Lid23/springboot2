@@ -1,14 +1,16 @@
 package com.noodles.springbootmybatis;
 
-import com.noodles.springbootmybatis.bean.StudentBean;
-import com.noodles.springbootmybatis.dao.StudentDao;
+import java.util.List;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import java.util.List;
+import com.noodles.springbootmybatis.bean.StudentBean;
+import com.noodles.springbootmybatis.dao.StudentDao;
+import com.noodles.springbootmybatis.util.JsonUtil;
 
 /**
  * @program: springboot
@@ -24,9 +26,10 @@ public class DaoTest {
     private StudentDao studentDao;
 
     @Test
-    public void testStudentDao() throws Exception {
+    public void testStudentDao() {
         List<StudentBean> studentBeanList = studentDao.selectAll();
-        System.out.println(studentBeanList.size());
+
+        System.out.println(JsonUtil.toJson(studentBeanList));
 
     }
 

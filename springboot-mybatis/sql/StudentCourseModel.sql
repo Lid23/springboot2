@@ -1,4 +1,10 @@
 -- 学生选课系统sql
+DROP TABLE Student;
+DROP TABLE Course;
+DROP TABLE Score;
+DROP TABLE Teacher;
+DROP TABLE Grade;
+
 -- 学生表
 CREATE TABLE Student
 (
