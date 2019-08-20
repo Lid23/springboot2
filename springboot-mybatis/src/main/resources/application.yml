@@ -35,8 +35,9 @@ spring:
       max-pool-prepared-statement-per-connection-size: 20
 
 mybatis:
-  mapper-locations: classpath:com/noodles/springbootmybatis/mapper/*.xml
   type-aliases-package: com.noodles.springbootmybatis.bean
+  mapper-locations: classpath:com/noodles/springbootmybatis/mapper/*Mapper.xml
+  config-location: classpath:com/noodles/springbootmybatis/mapper/mybatis.cfg.xml
 #分页插件
 pagehelper:
   helper-dialect: mysql

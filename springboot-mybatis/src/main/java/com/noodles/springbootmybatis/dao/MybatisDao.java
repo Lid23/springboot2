@@ -1,6 +1,8 @@
 package com.noodles.springbootmybatis.dao;
 
-import tk.mybatis.mapper.common.Mapper;
+import java.util.List;
+
+import org.apache.ibatis.annotations.Mapper;
 
 import com.noodles.springbootmybatis.bean.StudentBean;
 
@@ -10,6 +12,8 @@ import com.noodles.springbootmybatis.bean.StudentBean;
  * @author: Eric
  * @create: 2018-11-27 17:19
  **/
-public interface StudentDao extends Mapper<StudentBean> {
-	StudentBean getStudentBySno(String sno);
+public interface MybatisDao {
+
+	List<StudentBean> getStudentList();
+
 }

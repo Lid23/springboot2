@@ -1,15 +1,15 @@
 package com.noodles.springbootmybatis;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import tk.mybatis.spring.annotation.MapperScan;
 
 @SpringBootApplication
-@MapperScan("com.noodles.springbootmybatis.dao")
+@MapperScan(basePackages = { "com.noodles.springbootmybatis.dao"}) /**如果dao层使用了@Mapper注解，无需扫描*/
 public class SpringbootMybatisApplication {
 
-    public static void main(String[] args) {
-        SpringApplication.run(SpringbootMybatisApplication.class, args);
-    }
+	public static void main(String[] args) {
+		SpringApplication.run(SpringbootMybatisApplication.class, args);
+	}
 
 }
