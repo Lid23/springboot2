@@ -42,8 +42,7 @@
     </build>
 
     <modules>
-        <module>springboot-jpa</module>
-        <module>springboot-mybatis</module>
+        <module>springboot-validation</module>
     </modules>
 
 </project>
