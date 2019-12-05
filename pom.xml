@@ -27,6 +27,11 @@
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
@@ -43,6 +48,17 @@
 
     <modules>
         <module>springboot-validation</module>
+        <module>springboot-actuator</module>
+        <module>springboot-avoid-repeat-submission</module>
+        <module>springboot-exception</module>
+        <module>springboot-fileupload</module>
+        <module>springboot-jpa</module>
+        <module>springboot-kafka</module>
+        <module>springboot-mybatis</module>
+        <module>springboot-rabbitmq</module>
+        <module>springboot-redis</module>
+        <module>springboot-task</module>
+        <module>springboot-threadpool</module>
     </modules>
 
 </project>
