@@ -1,0 +1,15 @@
+spring:
+  kafka:
+    bootstrap-servers: 10.168.12.170:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+      batch-size: 4096
+      buffer-memory: 40960
+    consumer:
+      group-id: baihangConsumerGroup
+      enable-auto-commit: true
+      auto-commit-interval: 1000
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      auto-offset-reset: earliest
