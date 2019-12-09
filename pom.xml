@@ -59,6 +59,9 @@
         <module>springboot-redis</module>
         <module>springboot-task</module>
         <module>springboot-threadpool</module>
+        <module>springboot-dubboprovider</module>
+        <module>springboot-dubboconsumer</module>
+        <module>springboot-dubboapi</module>
     </modules>
 
 </project>

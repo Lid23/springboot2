@@ -33,6 +33,11 @@ public class BookController {
         this.rabbitTemplate = rabbitTemplate;
     }
 
+    @GetMapping(value = "index")
+    public String index(){
+        return "Hello World";
+    }
+
     @GetMapping(value = "defaultMessage")
     public void defaultMessage(){
         Book book = new Book();

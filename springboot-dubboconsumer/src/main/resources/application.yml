@@ -1,0 +1,7 @@
+server:
+  port: 8880
+  servlet:
+    context-path: /dubboconsumer
+spring:
+  application:
+    name: springboot-dubboconsumer
