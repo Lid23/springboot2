@@ -1,18 +1,24 @@
-server:
-  port: 8584
+#Redis集群配置
 spring:
+  redis:
+    cluster:
+      nodes: 10.168.12.51:5100,10.168.12.51:5101,10.168.12.63:6300,10.168.12.63:6301,10.168.12.64:7300,10.168.12.64:7301
+    timeout: 10000
+    database: 0
+    lettuce:
+      pool:
+        max-active: 100                         #连接池最大连接数
+        max-idle: 10                            #连接池中的最大空闲连接
+        max-wait: -1                            #连接池最大阻塞等待时间（使用负值表示没有限制）
+        min-idle: 0
+        timeout: 0                                #连接超时时间（毫秒）
   datasource:
     name: mysql_test
     type: com.alibaba.druid.pool.DruidDataSource
-    #druid相关配置
     druid:
       #监控统计拦截的filters
       filters: stat
       driver-class-name: com.mysql.cj.jdbc.Driver
-      #基本属性
-#      url: jdbc:mysql://10.168.11.61:3309/msg_db?characterEncoding=utf-8&allowMultiQueries=true&useSSL=false
-#      username: dba_msginfo
-#      password: UA9655pwd_msg
       url: jdbc:mysql://localhost:3306/noodles?characterEncoding=utf-8&allowMultiQueries=true&useSSL=false
       username: root
       password: admin123
@@ -33,13 +39,13 @@ spring:
       #打开PSCache，并指定每个连接上PSCache的大小。oracle设为true，mysql设为false。分库分表较多推荐设置为false
       pool-prepared-statements: false
       max-pool-prepared-statement-per-connection-size: 20
-mybatis:
-  type-aliases-package: com.noodles.springbootmybatis.bean
-  mapper-locations: classpath:com/noodles/springbootmybatis/mapper/*Mapper.xml
-  config-location: classpath:com/noodles/springbootmybatis/mapper/mybatis.cfg.xml
-#分页插件
-pagehelper:
-  helper-dialect: mysql
-  params: count=countsql
-  reasonable: false
-  support-methods-arguments: true
+  mybatis:
+    type-aliases-package: com.noodles.springbootmybatis.bean
+    mapper-locations: classpath:com/noodles/springbootmybatis/mapper/*Mapper.xml
+    config-location: classpath:com/noodles/springbootmybatis/mapper/mybatis.cfg.xml
+  #分页插件
+  pagehelper:
+    helper-dialect: mysql
+    params: count=countsql
+    reasonable: false
+    support-methods-arguments: true

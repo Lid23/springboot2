@@ -63,6 +63,7 @@
         <module>springboot-dubboconsumer</module>
         <module>springboot-dubboapi</module>
         <module>springboot-nettypool</module>
+        <module>springboot2-demos</module>
     </modules>
 
 </project>
