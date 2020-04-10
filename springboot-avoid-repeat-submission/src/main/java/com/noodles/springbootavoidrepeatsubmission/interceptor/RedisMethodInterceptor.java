@@ -15,7 +15,7 @@ import java.lang.reflect.Method;
 import java.util.UUID;
 
 /**
- * @program: springboot2
+ * @program: springboot
  * @description: RedisMethodInterceptor
  * @author: Eric
  * @create: 2019-06-14 16:14

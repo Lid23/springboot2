@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 import java.time.LocalDateTime;
 
 /**
- * @program: springboot2
+ * @program: springboot
  * @description: SpringbootTaskDemo
  * @author: Eric
  * @create: 2019-06-14 13:28

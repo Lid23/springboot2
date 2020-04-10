@@ -3,7 +3,7 @@ package com.noodles.springbootrabbitmq.bean;
 import java.io.Serializable;
 
 /**
- * @program: springboot2
+ * @program: springboot
  * @description: Book类
  * @author: Eric
  * @create: 2019-05-08 15:33

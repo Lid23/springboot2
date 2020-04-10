@@ -15,7 +15,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.regex.Pattern;
 
 /**
- * @program: springboot2
+ * @program: springboot
  * @description: RedisLockHelper
  * @author: Eric
  * @create: 2019-06-14 16:16

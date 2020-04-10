@@ -9,7 +9,7 @@ import java.lang.annotation.Target;
 
 /**
  * 锁的注解
- * @program: springboot2
+ * @program: springboot
  * @description: 本地锁
  * @author: Eric
  * @create: 2019-06-14 15:45

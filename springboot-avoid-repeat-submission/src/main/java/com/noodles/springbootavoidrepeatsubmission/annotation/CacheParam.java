@@ -8,7 +8,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * @program: springboot2
+ * @program: springboot
  * @description: 锁的参数
  * @author: Eric
  * @create: 2019-06-14 16:09

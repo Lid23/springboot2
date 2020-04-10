@@ -9,8 +9,9 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>springboot2-demos</artifactId>
+    <artifactId>springboot-demos</artifactId>
     <properties>
+        <noodels.version>0.0.1-SNAPSHOT</noodels.version>
         <java.version>1.8</java.version>
     </properties>
     <dependencies>
@@ -52,6 +53,12 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <scope>runtime</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.noodles</groupId>
+            <artifactId>springboot-utils</artifactId>
+            <version>${noodels.version}</version>
         </dependency>
     </dependencies>
 

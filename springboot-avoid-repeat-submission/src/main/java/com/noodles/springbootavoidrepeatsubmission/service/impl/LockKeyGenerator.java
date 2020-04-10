@@ -14,7 +14,7 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Parameter;
 
 /**
- * @program: springboot2
+ * @program: springboot
  * @description: LockKeyGenerator
  * @author: Eric
  * @create: 2019-06-14 16:12

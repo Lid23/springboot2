@@ -1,6 +1,9 @@
 package com.noodles.springbootdemos.controller;
 
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.noodles.springbootdemos.vo.resp.BaseRespVo;
 
 /**
  * @filename AgreeProtocolController
@@ -13,5 +16,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class AgreeProtocolController {
+
+
+	/**第一版只用数据库，不用Redis*/
+	@RequestMapping("/hasAgree")
+	public BaseRespVo hasAgree(){
+return null;
+	}
 
 }

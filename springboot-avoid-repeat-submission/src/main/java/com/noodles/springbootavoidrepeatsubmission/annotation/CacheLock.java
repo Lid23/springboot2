@@ -9,7 +9,7 @@ import java.lang.annotation.Target;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @program: springboot2
+ * @program: springboot
  * @description: 分布式锁
  * @author: Eric
  * @create: 2019-06-14 16:08

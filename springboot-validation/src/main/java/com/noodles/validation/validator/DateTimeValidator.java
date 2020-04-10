@@ -8,7 +8,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
 /**
- * @program: springboot2
+ * @program: springboot
  * @description: DateTimeValidator
  * @author: Eric
  * @create: 2019-06-14 15:12

@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @program: springboot2
+ * @program: springboot
  * @description: MyEndPoint
  * @author: Eric
  * @create: 2019-06-14 11:27

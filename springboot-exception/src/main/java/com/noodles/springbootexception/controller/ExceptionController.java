@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * @program: springboot2
+ * @program: springboot
  * @description: ExceptionController
  * @author: Eric
  * @create: 2019-06-14 14:01

@@ -15,7 +15,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * 基于本地缓存来做
- * @program: springboot2
+ * @program: springboot
  * @description: 本地锁拦截器
  * @author: Eric
  * @create: 2019-06-14 15:47

@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 
 /**
  * 实现HealthIndicator接口，根据自己的需要判断返回的状态是UP还是DOWN，功能简单
- * @program: springboot2
+ * @program: springboot
  * @description: MyHealthIndicator
  * @author: Eric
  * @create: 2019-06-14 11:04

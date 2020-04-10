@@ -12,7 +12,7 @@ import static java.lang.annotation.ElementType.PARAMETER;
 import static java.lang.annotation.RetentionPolicy.RUNTIME;
 
 /**
- * @program: springboot2
+ * @program: springboot
  * @description: DateTime
  * @author: Eric
  * @create: 2019-06-14 15:11

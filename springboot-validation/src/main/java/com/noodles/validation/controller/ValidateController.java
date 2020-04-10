@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.validation.constraints.NotBlank;
 
 /**
- * @program: springboot2
+ * @program: springboot
  * @description: ValidateController
  * @author: Eric
  * @create: 2019-06-14 14:18

@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * @program: springboot2
+ * @program: springboot
  * @description: BookController
  * @author: Eric
  * @create: 2019-06-14 15:53

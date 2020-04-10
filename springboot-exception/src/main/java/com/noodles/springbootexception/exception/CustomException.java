@@ -1,7 +1,7 @@
 package com.noodles.springbootexception.exception;
 
 /**
- * @program: springboot2
+ * @program: springboot
  * @description: CustomException
  * @author: Eric
  * @create: 2019-06-14 14:00

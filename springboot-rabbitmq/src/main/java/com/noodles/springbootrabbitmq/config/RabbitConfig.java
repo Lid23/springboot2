@@ -12,7 +12,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @program: springboot2
+ * @program: springboot
  * @description: Rabbitmq配置类
  * @author: Eric
  * @create: 2019-05-08 15:28

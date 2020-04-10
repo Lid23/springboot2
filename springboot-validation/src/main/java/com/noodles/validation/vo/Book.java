@@ -9,7 +9,7 @@ import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
 
 /**
- * @program: springboot2
+ * @program: springboot
  * @description: Book
  * @author: Eric
  * @create: 2019-06-14 14:20

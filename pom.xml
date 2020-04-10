@@ -12,7 +12,7 @@
     <groupId>com.noodles</groupId>
     <artifactId>springboot2</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>springboot2</name>
+    <name>springboot</name>
     <description>Springboot2 Practice</description>
 
     <properties>
@@ -63,7 +63,9 @@
         <module>springboot-dubboconsumer</module>
         <module>springboot-dubboapi</module>
         <module>springboot-nettypool</module>
-        <module>springboot2-demos</module>
+        <module>springboot-demos</module>
+        <module>springboot-utils</module>
+        <module>springboot-logs</module>
     </modules>
 
 </project>

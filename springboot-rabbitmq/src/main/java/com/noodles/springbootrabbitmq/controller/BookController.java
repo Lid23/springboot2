@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.time.LocalDateTime;
 
 /**
- * @program: springboot2
+ * @program: springboot
  * @description: bookController
  * @author: Eric
  * @create: 2019-05-08 15:36

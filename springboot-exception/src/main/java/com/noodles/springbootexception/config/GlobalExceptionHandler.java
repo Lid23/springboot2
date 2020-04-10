@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  * 全局异常处理
- * @program: springboot2
+ * @program: springboot
  * @description: GlobalExceptionHandler
  * @author: Eric
  * @create: 2019-06-14 14:02
