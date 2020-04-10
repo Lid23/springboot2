@@ -1,9 +1,14 @@
 package com.noodles.springbootdemos.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.noodles.springbootdemos.vo.resp.BaseRespVo;
+import com.noodles.response.utils.ResponseUtils;
+import com.noodles.springbootdemos.bean.AgreeProtocolInfo;
+import com.noodles.springbootdemos.dao.AgreeProtocolInfoDao;
+import com.noodles.vo.resp.BaseRespVo;
 
 /**
  * @filename AgreeProtocolController
@@ -17,11 +22,18 @@ import com.noodles.springbootdemos.vo.resp.BaseRespVo;
 @RestController
 public class AgreeProtocolController {
 
+	@Autowired
+	private AgreeProtocolInfoDao agreeProtocolInfoDao;
+
 
 	/**第一版只用数据库，不用Redis*/
 	@RequestMapping("/hasAgree")
-	public BaseRespVo hasAgree(){
-return null;
+	public BaseRespVo<String> hasAgree(@RequestParam String custNo){
+		AgreeProtocolInfo agreeProtocolInfoParam = new AgreeProtocolInfo();
+		agreeProtocolInfoParam.setCustNo(custNo);
+		AgreeProtocolInfo agreeProtocolInfo = agreeProtocolInfoDao.selectOne(agreeProtocolInfoParam);
+
+		return ResponseUtils.responseSuccess(agreeProtocolInfo == null ? "0" : "1");
 	}
 
 }

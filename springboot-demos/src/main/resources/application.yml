@@ -1,3 +1,7 @@
+server:
+  port: 8888
+  servlet:
+    context-path: /springbootdemos
 #Redis集群配置
 spring:
   redis:
@@ -19,7 +23,7 @@ spring:
       #监控统计拦截的filters
       filters: stat
       driver-class-name: com.mysql.cj.jdbc.Driver
-      url: jdbc:mysql://localhost:3306/noodles?characterEncoding=utf-8&allowMultiQueries=true&useSSL=false
+      url: jdbc:mysql://localhost:3306/noodles?characterEncoding=utf-8&allowMultiQueries=true&useSSL=false&serverTimezone=GMT%2B8
       username: root
       password: admin123
       #配置初始化大小/最小/最大
@@ -40,9 +44,9 @@ spring:
       pool-prepared-statements: false
       max-pool-prepared-statement-per-connection-size: 20
   mybatis:
-    type-aliases-package: com.noodles.springbootmybatis.bean
-    mapper-locations: classpath:com/noodles/springbootmybatis/mapper/*Mapper.xml
-    config-location: classpath:com/noodles/springbootmybatis/mapper/mybatis.cfg.xml
+    type-aliases-package: com.noodles.springbootdemos.bean
+    mapper-locations: classpath:com/noodles/springbootdemos/mapper/*Mapper.xml
+    config-location: classpath:com/noodles/springbootdemos/mapper/mybatis.cfg.xml
   #分页插件
   pagehelper:
     helper-dialect: mysql

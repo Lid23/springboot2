@@ -46,6 +46,11 @@
             <artifactId>springboot-logs</artifactId>
             <version>${noodles.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.noodles</groupId>
+            <artifactId>springboot-api</artifactId>
+            <version>${noodles.version}</version>
+        </dependency>
     </dependencies>
 
 

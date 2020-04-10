@@ -1,4 +1,4 @@
-package com.noodles.springbootdemos.vo.resp;
+package com.noodles.vo.resp;
 
 import java.io.Serializable;
 

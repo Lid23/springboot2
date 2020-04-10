@@ -12,6 +12,6 @@
     </settings>
 
     <!--<mappers>
-        <mapper resource="com\noodles\springbootmybatis\mapper\MybatisMapper.xml"/>
+        <mapper resource="com\noodles\springbootmybatis\mapper\AgreeProtocolInfoMapper.xml"/>
     </mappers>-->
 </configuration>
