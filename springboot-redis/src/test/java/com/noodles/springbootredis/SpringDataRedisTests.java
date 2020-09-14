@@ -48,7 +48,7 @@ public class SpringDataRedisTests {
 
 	@Test
 	public void getKey(){
-		final String k1 = stringRedisTemplate.opsForValue().get("k1");
+		final String k1 = stringRedisTemplate.opsForValue().get("foo");
 		System.out.println(k1);
 		User user = (User) redisTemplate.opsForValue().get("testUser");
 		System.out.println(user.getPassword());
