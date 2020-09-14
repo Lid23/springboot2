@@ -1,3 +1,5 @@
+-- noinspection SqlDialectInspectionForFile
+
 DROP TABLE IF EXISTS AgreeProtocolInfo;
 
 CREATE TABLE AgreeProtocolInfo (
@@ -5,6 +7,9 @@ CREATE TABLE AgreeProtocolInfo (
    cust_no VARCHAR(32) COMMENT '客户号',
    created_date DATETIME COMMENT '插入时间'
 ) COMMENT='记录是否勾选过协议表';
+
+
+insert into AgreeProtocolInfo(cust_no, created_date) values ('123456', now());
 
 
 -- Study -------------------------------------------------------------------------------------------------------------------------------

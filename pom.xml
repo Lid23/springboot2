@@ -81,9 +81,9 @@
         <module>springboot-dubboapi</module>
         <module>springboot-nettypool</module>
         <module>springboot-demos</module>
-        <module>springboot-utils</module>
         <module>springboot-logs</module>
         <module>springboot-api</module>
+        <module>springboot-utils</module>
     </modules>
 
 </project>

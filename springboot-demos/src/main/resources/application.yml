@@ -1,12 +1,14 @@
 server:
-  port: 8888
+  port: 8889
   servlet:
     context-path: /springbootdemos
 #Redis集群配置
 spring:
   redis:
-    cluster:
-      nodes: 10.168.12.51:5100,10.168.12.51:5101,10.168.12.63:6300,10.168.12.63:6301,10.168.12.64:7300,10.168.12.64:7301
+#    cluster:
+#      nodes: 10.168.12.51:5100,10.168.12.51:5101,10.168.12.63:6300,10.168.12.63:6301,10.168.12.64:7300,10.168.12.64:7301
+    host: 127.0.0.1
+    port: 6379
     timeout: 10000
     database: 0
     lettuce:
@@ -25,7 +27,8 @@ spring:
       driver-class-name: com.mysql.cj.jdbc.Driver
       url: jdbc:mysql://localhost:3306/noodles?characterEncoding=utf-8&allowMultiQueries=true&useSSL=false&serverTimezone=GMT%2B8
       username: root
-      password: admin123
+      #password: admin123
+      password: Fujitsu913
       #配置初始化大小/最小/最大
       initial-size: 1
       min-idle: 1
