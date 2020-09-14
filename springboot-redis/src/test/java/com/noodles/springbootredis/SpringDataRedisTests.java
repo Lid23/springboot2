@@ -41,8 +41,7 @@ public class SpringDataRedisTests {
 
 	@Test
 	public void setKey(){
-		stringRedisTemplate.opsForValue().set("k1", "v1");
-
+		stringRedisTemplate.opsForValue().set("k1", "v1test");
 		redisTemplate.opsForValue().set("testUser", new User("u1", "pass"));
 		System.out.println("done");
 	}
@@ -51,9 +50,8 @@ public class SpringDataRedisTests {
 	public void getKey(){
 		final String k1 = stringRedisTemplate.opsForValue().get("k1");
 		System.out.println(k1);
-		/*User user = (User) redisTemplate.opsForValue().get("testUser");
-		System.out.println(k1);
-		System.out.println(user.getPassword());*/
+		User user = (User) redisTemplate.opsForValue().get("testUser");
+		System.out.println(user.getPassword());
 	}
 
 	@Test
