@@ -16,7 +16,8 @@ public class ReduceStockController {
 	
 	@Autowired
 	private StringRedisTemplate stringRedisTemplate;
-	
+
+
 	/**
 	 * 非线程安全，jmeter模拟5*20个线程请求，100的库存不会清零
 	 * @author 巫威

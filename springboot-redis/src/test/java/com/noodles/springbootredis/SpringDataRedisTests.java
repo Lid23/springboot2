@@ -49,7 +49,7 @@ public class SpringDataRedisTests {
 
 	@Test
 	public void getKey(){
-		final String k1 = stringRedisTemplate.opsForValue().get("stock");
+		final String k1 = stringRedisTemplate.opsForValue().get("k1");
 		System.out.println(k1);
 		/*User user = (User) redisTemplate.opsForValue().get("testUser");
 		System.out.println(k1);

@@ -1,10 +1,24 @@
 #Redis集群配置
+#spring:
+#  redis:
+#    cluster:
+#      nodes: 10.168.12.51:5100,10.168.12.51:5101,10.168.12.63:6300,10.168.12.63:6301,10.168.12.64:7300,10.168.12.64:7301
+#    timeout: 10000
+#    database: 0
+#    lettuce:
+#      pool:
+#        max-active: 100                         #连接池最大连接数
+#        max-idle: 10                            #连接池中的最大空闲连接
+#        max-wait: -1                            #连接池最大阻塞等待时间（使用负值表示没有限制）
+#        min-idle: 0
+#        timeout: 0                                #连接超时时间（毫秒）
 spring:
   redis:
-    cluster:
-      nodes: 10.168.12.51:5100,10.168.12.51:5101,10.168.12.63:6300,10.168.12.63:6301,10.168.12.64:7300,10.168.12.64:7301
+    host: 10.168.12.170
     timeout: 10000
     database: 0
+    port: 6379
+    password: foobared
     lettuce:
       pool:
         max-active: 100                         #连接池最大连接数
