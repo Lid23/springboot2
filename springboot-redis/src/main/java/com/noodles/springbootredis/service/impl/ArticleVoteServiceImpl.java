@@ -130,7 +130,7 @@ public class ArticleVoteServiceImpl implements IArticleVoteService {
 	 * 查询文章列表
 	 * @param page 页数
 	 * @param order 排序规则
-	 * @return java.util.List<java.util.Map<java.lang.String,java.lang.Object>>
+	 * @return java.util.List<java.util.Map < java.lang.String, java.lang.Object>>
 	 * @author 巫威
 	 * @date 2020/9/15 15:01
 	 */
@@ -147,5 +147,26 @@ public class ArticleVoteServiceImpl implements IArticleVoteService {
 
 		}
 		return articleList;
+	}
+
+	/***
+	 * 群组功能，把文章添加到群组或者从群组中移除文章
+	 * @param articleId
+	 * @param addGroups
+	 * @param removeGroup 
+	 * @return void 
+	 * @author 巫威 
+	 * @date 2020-09-15 21:43 
+	 */
+	@Override
+	public void addRemoveGroups(Long articleId, List<String> addGroups, List<String> removeGroup) {
+		String article = "article:" + articleId;
+		for (String group : addGroups) {
+			stringRedisTemplate.opsForSet().add("group:" + group, article);
+		}
+
+		for (String group : removeGroup) {
+			stringRedisTemplate.opsForSet().remove("group:" + group, article);
+		}
 	}
 }

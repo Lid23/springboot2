@@ -42,4 +42,14 @@ public interface IArticleVoteService {
 	 */
 	public List<Map<Object, Object>> getArticles(int page, String order);
 
+	/***
+	 * 群组功能，把文章添加到群组或者从群组中移除文章
+	 * @param articleId 文章id
+	 * @param addGroups 添加的群组list
+	 * @param removeGroup  移除文章的群组list
+	 * @author 巫威 
+	 * @date 2020-09-15 21:22 
+	 */
+	public void addRemoveGroups(Long articleId, List<String> addGroups, List<String> removeGroup);
+
 }
