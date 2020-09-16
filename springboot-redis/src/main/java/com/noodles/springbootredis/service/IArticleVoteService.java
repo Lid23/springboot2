@@ -23,6 +23,7 @@ public interface IArticleVoteService {
 
 	/**
 	 * 发布新文章
+	 * @param articleId
 	 * @param user
 	 * @param title
 	 * @param link
@@ -30,7 +31,7 @@ public interface IArticleVoteService {
 	 * @author 巫威
 	 * @date 2020/9/15 14:15
 	 */
-	public Long postArticle(String user, String title, String link);
+	public Long postArticle(Long articleId, String user, String title, String link);
 
 	/**
 	 * 查询文章列表
@@ -51,5 +52,16 @@ public interface IArticleVoteService {
 	 * @date 2020-09-15 21:22 
 	 */
 	public void addRemoveGroups(Long articleId, List<String> addGroups, List<String> removeGroup);
+
+	/**
+	 * 查询群组文章列表
+	 * @param group
+	 * @param page
+	 * @param order
+	 * @return java.util.List<java.util.Map<java.lang.Object,java.lang.Object>>
+	 * @author 巫威
+	 * @date 2020/9/16 9:45
+	 */
+	public List<Map<Object, Object>> getGroupArticles(String group, int page, String order);
 
 }

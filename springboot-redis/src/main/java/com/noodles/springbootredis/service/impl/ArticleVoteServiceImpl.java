@@ -97,9 +97,11 @@ public class ArticleVoteServiceImpl implements IArticleVoteService {
 	 * @date 2020/9/15 14:15
 	 */
 	@Override
-	public Long postArticle(String user, String title, String link) {
+	public Long postArticle(Long articleId, String user, String title, String link) {
 		/**生成一个新的文章Id*/
-		Long articleId = stringRedisTemplate.opsForValue().increment("article:");
+		if (articleId == null) {
+			articleId = stringRedisTemplate.opsForValue().increment("article:");
+		}
 
 		String voted = "voted:" + articleId;
 		/**将发布文章的用户添加到文章的已投票用户名单里面，然后将这个名单的过期时间设置为一周*/
@@ -168,5 +170,16 @@ public class ArticleVoteServiceImpl implements IArticleVoteService {
 		for (String group : removeGroup) {
 			stringRedisTemplate.opsForSet().remove("group:" + group, article);
 		}
+	}
+
+	@Override
+	public List<Map<Object, Object>> getGroupArticles(String group, int page, String order) {
+		String key = order + group;
+		if (!stringRedisTemplate.hasKey(key)) {
+			stringRedisTemplate.opsForZSet().intersectAndStore(order,"group:" + group , key);
+		}
+		stringRedisTemplate.expire(key, 60, TimeUnit.SECONDS);
+
+		return getArticles(page, key);
 	}
 }
