@@ -1,5 +1,7 @@
 package com.noodles.springbootredis.service;
 
+import javax.servlet.http.HttpServletRequest;
+
 /**
  * @filename IFakeWebRetailerService
  * @description Redis构建web应用实例接口
@@ -43,4 +45,29 @@ public interface IFakeWebRetailerService {
 	 * @date 2020/9/16 16:11
 	 */
 	public void cleanSessions();
+
+	/**
+	 * 定义购物车，每个用户的购物车都是一个散列，存储了商品ID月商品订购数量之间的映射
+	 * @param sessionToken
+	 * @param item
+	 * @param count
+	 * @return void
+	 * @author 巫威
+	 * @date 2020/9/18 13:42
+	 */
+	public void addToCart(String sessionToken, String item, int count);
+
+	/**
+	 * 网站上的多数页面实际上并不会经常发生大的变化，一般情况下，网站只有账号设置，以往订单，购物车（结账信息）
+	 * 以及其他少数几个页面才包含需要每次载入都要动态生成的内容。
+	 * 缓存函数：对于一个不能被缓存的请求，函数将直接生成并返回页面，而对于可以被缓存的请求，函数首先会先尝试从
+	 * 缓存里面取出并返回被缓存的页面，如果页面不存在，那么函数会生成页面并将其缓存在Redis里面5分钟，最后再将
+	 * 页面返回给函数调用者
+	 * @param request
+	 * @return java.lang.String
+	 * @author 巫威
+	 * @date 2020/9/18 14:12
+	 */
+	public String cacheRequest(HttpServletRequest request);
+
 }
