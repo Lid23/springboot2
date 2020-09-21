@@ -1,14 +1,15 @@
 package com.noodles.springbootjpa.controller;
 
-import com.noodles.springbootjpa.bean.UserBean;
-import com.noodles.springbootjpa.repository.UserJPA;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
+import com.noodles.springbootjpa.bean.UserBean;
+import com.noodles.springbootjpa.repository.UserJPA;
 
 /**
 * @Description:
@@ -76,9 +77,9 @@ public class UserController {
         //获取排序对象
         Sort.Direction sort_direction = Sort.Direction.ASC.toString().equalsIgnoreCase(user.getSord()) ? Sort.Direction.ASC : Sort.Direction.DESC;
         //设置排序对象参数
-        Sort sort = new Sort(sort_direction, user.getSidx());
+        Sort sort = Sort.by(sort_direction, user.getSidx());
         //创建分页对象
-        PageRequest pageRequest = new PageRequest(user.getPage() - 1, user.getSize(), sort);
+        PageRequest pageRequest = PageRequest.of(user.getPage() - 1, user.getSize(), sort);
         //执行分页查询
         return userJPA.findAll(pageRequest).getContent();
     }

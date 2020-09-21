@@ -1,18 +1,15 @@
 package com.noodles.springbootactuator;
 
-import com.noodles.springbootactuator.endpoint.MyEndPoint;
-import de.codecentric.boot.admin.server.config.AdminServerProperties;
-import de.codecentric.boot.admin.server.config.EnableAdminServer;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.actuate.autoconfigure.endpoint.condition.ConditionalOnEnabledEndpoint;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.web.authentication.SavedRequestAwareAuthenticationSuccessHandler;
+
+import de.codecentric.boot.admin.server.config.AdminServerProperties;
+import de.codecentric.boot.admin.server.config.EnableAdminServer;
 
 @EnableAdminServer
 @SpringBootApplication
@@ -58,13 +55,4 @@ public class SpringbootActuatorApplication {
 		}
 	}
 
-	@Configuration
-	static class MyEndpointConfiguration{
-		@Bean
-		@ConditionalOnMissingBean
-		@ConditionalOnEnabledEndpoint
-		public MyEndPoint myEndPoint(){
-			return new MyEndPoint();
-		}
-	}
 }
