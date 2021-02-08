@@ -47,6 +47,7 @@
         <module>springboot-dubboapi</module>
         <module>springboot-nettypool</module>
         <module>springboot-demos</module>
+        <module>springboot-threadpool-starter</module>
     </modules>
 
     <build>

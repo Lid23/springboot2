@@ -3,13 +3,12 @@ package com.noodles.springbootdemos.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.noodles.api.vo.resp.BaseRespVo;
 import com.noodles.response.utils.ResponseUtils;
 import com.noodles.springbootdemos.bean.AgreeProtocolInfo;
 import com.noodles.springbootdemos.dao.AgreeProtocolInfoDao;
-import com.noodles.vo.resp.BaseRespVo;
 
 /**
  * @filename AgreeProtocolController

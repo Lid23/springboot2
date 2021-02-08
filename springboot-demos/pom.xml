@@ -57,7 +57,25 @@
 
         <dependency>
             <groupId>com.noodles</groupId>
-            <artifactId>springboot-utils</artifactId>
+            <artifactId>noodles-api</artifactId>
+            <version>${noodels.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.noodles</groupId>
+            <artifactId>noodles-util</artifactId>
+            <version>${noodels.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.noodles</groupId>
+            <artifactId>noodles-jsoup</artifactId>
+            <version>${noodels.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.noodles</groupId>
+            <artifactId>springboot-threadpool-starter</artifactId>
             <version>${noodels.version}</version>
         </dependency>
     </dependencies>
