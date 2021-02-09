@@ -1,0 +1,26 @@
+### 获取token
+GET http://localhost:8889/springbootdemos/token/getToken
+Accept: application/json
+Content-Type: application/json
+Cache-Control: no-cache
+
+{
+}
+
+### da14238a182944e0a87988b7e0c3d196
+
+### 保存用户
+POST http://localhost:8889/springbootdemos/token/saveTokenUser
+Accept: application/json
+Content-Type: application/json
+Cache-Control: no-cache
+access-token: da14238a182944e0a87988b7e0c3d196
+
+{
+  "name": "eric",
+  "age": 18,
+  "note": "小巫家"
+}
+
+###
+

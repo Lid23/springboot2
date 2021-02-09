@@ -60,7 +60,11 @@
             <artifactId>noodles-api</artifactId>
             <version>${noodels.version}</version>
         </dependency>
-
+        <dependency>
+            <groupId>com.noodles</groupId>
+            <artifactId>noodles-logback</artifactId>
+            <version>${noodels.version}</version>
+        </dependency>
         <dependency>
             <groupId>com.noodles</groupId>
             <artifactId>noodles-util</artifactId>
