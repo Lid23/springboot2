@@ -1,0 +1,16 @@
+# 获取微信信息，返回openID和登陆用token和key
+POST http://10.170.10.4/wechatapp/user/v1/getWxMessage
+Accept: application/json
+Content-Type: application/json
+Cache-Control: no-cache
+
+{
+  "sign":"13c05558a4d3ac67da0ca57577d97de60c11c61c2bb069f8531222dcfd97f0c5",
+  "timestamp":"1565233098404",
+  "token":"e01908bf-ac96-4496-a897-9252b8199399",
+  "data":{
+    "wxCode": "123456"
+  }
+}
+
+###
